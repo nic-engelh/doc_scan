@@ -22,7 +22,9 @@
 
     const startCamera = async () => {
         try {
-            stream = await navigator.mediaDevices.getUserMedia({ video: true})
+            stream = await navigator.mediaDevices.getUserMedia({  video: {
+                facingMode: { exact: "environment" },
+            },})
             if (video.value) {
                 video.value.srcObject = stream
             }
