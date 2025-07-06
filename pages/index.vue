@@ -52,18 +52,16 @@
         </div>
         </div>
     </UContainer>
-
-
-
-
 </template>
-<script setup lang="ts">
-// This array will hold the data URLs of all captured pictures
-const pictures = ref<string[]>([])
 
-// This function is called when the TakePhoto component emits the 'image-captured' event
-const addImageToGallery = (imageUrl: string) => {
-  // Add the new image to the beginning of the array to show it first
-  pictures.value.unshift(imageUrl)
-}
+
+<script setup lang="ts">
+    // This array will hold the data URLs of all captured pictures
+    const pictures = ref<string[]>([])
+
+    // This function is called when the TakePhoto component emits the 'image-captured' event
+    const addImageToGallery = (imageUrl: string) => {
+    // Add the new image to the beginning of the array to show it first
+    pictures.value.unshift(imageUrl)
+    }
 </script>
